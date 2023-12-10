@@ -1,603 +1,612 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior: smooth;
 }
-body {
-  margin: 0;
-  font-family: 'Roboto Slab', serif;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
+body{
+    margin:0;
+    font-family: 'Roboto Slab', serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0px;
+.row{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.container {
-  max-width: 1140px;
-  margin: auto;
+*{
+    box-sizing: border-box;
+    margin: 0px;
 }
-.row {
-  display: flex;
-  flex-wrap: wrap;
+
+.container{
+    max-width: 1140px;
+    margin: auto;
 }
-.section-title {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 40px;
+.row{
+    display: flex;
+    flex-wrap: wrap;
 }
-.section-title h1 {
-  display: inline-block;
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: black;
-  margin: 0px 0px 10px;
-  position: relative;
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
 }
-.section-title h1:before {
-  content: '';
-  left: 0px;
-  position: absolute;
-  height: 2px;
-  right: 30%;
-  background-color: orange;
-  bottom: 0px;
+.section-title h1{
+    display: inline-block;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:black;
+    margin: 0px 0px 10px;
+    position: relative;
 }
-.text-center {
-  text-align: center !important;
+.section-title h1:before{
+    content: '';
+    left: 0px;
+    position: absolute;
+    height: 2px;
+    right: 30%;
+    background-color: orange;
+    bottom: 0px;
 }
+.text-center{
+    text-align: center!important;
+}
+
 
 /* Header Section */
 
-header {
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  border-bottom: 1px solid gray;
-  padding: 0px 15px;
-  z-index: 11;
+header{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid gray;
+    padding: 0px 15px;
+    z-index: 11;
 }
-header.fixed {
-  background-color: white;
-  position: fixed;
-  border-color: lightgray;
-  animation: fixHeader 0.5s ease;
-}
-
-@keyframes fixHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(-0%);
-  }
+header.fixed{
+    background-color: white;
+    position: fixed;
+    border-color:lightgray;
+    animation: fixHeader .5s ease;
 }
 
-header .row {
-  justify-content: space-between;
-  align-items: center;
+@keyframes fixHeader{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-0%);
+    }
 }
-header .brand-name a {
-  text-decoration: none;
-  font-size: 25px;
-  font-weight: 600;
-  color: black;
-  text-transform: uppercase;
-  position: relative;
+
+header .row{
+    justify-content: space-between;
+    align-items: center;
 }
-header.fixed .brand-name a {
-  color: black;
+header .brand-name a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color:whitesmoke;
+    text-transform: uppercase;  
+    position: relative;
+}
+header.fixed .brand-name a{
+    color:black;
 }
 header .navbar ul {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
-header .navbar ul li {
-  display: inline-block;
-  margin-left: 35px;
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
 }
-header .navbar ul li a {
-  font-size: 15px;
-  text-decoration: none;
-  line-height: 70px;
-  color: black;
-  display: block;
-  font-weight: 600;
-  position: relative;
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 70px;
+    color:whitesmoke;
+    display: block;
+    font-weight: 600;
+    position: relative;
 }
-header.fixed .navbar ul li a {
-  color: black;
+header.fixed .navbar ul li a{
+    color: black;
 }
-header .navbar ul li a::before {
-  content: '';
-  height: 3px;
-  background-color: black;
-  width: 0%;
-  position: absolute;
-  right: 0px;
-  bottom: -1px;
-  transition: all 0.5s ease;
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color:whitesmoke;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
 }
-header.fixed .navbar ul li a::before {
-  background-color: black;
+header.fixed .navbar ul li a::before{
+    background-color:black;
 }
-header .navbar ul li a:hover::before {
-  width: 100%;
-  left: 0px;
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0px;
 }
-header .navbar ul li a.active::before {
-  width: 100%;
-  left: 0px;
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0px;
 }
+
 
 /* Home Section */
 
-.home {
-  min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('images/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 15px;
+.home{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 15px;
 }
-.home .full-screen {
-  min-height: 100vh;
+.home .full-screen{
+    min-height: 100vh;
 }
-.home .home-content {
-  flex: 0 0 100%;
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.home .home-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
-.home .home-content .block {
-  flex: 0 0 75%;
-  max-width: 75%;
-  padding-left: 30px;
-  margin-top: 50px;
+.home .home-content .block{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 30px;
+    margin-top: 50px;
 }
-.home .home-content .block h6 {
-  color: black;
-  font-size: 25px;
-  font-weight: 400;
-  margin: 0px;
-  padding: 0px;
+.home .home-content .block h2{
+    color:whitesmoke;
+    font-size:30px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
 }
-.home .home-content .block h1 {
-  color: black;
-  font-size: 60px;
-  font-weight: 500;
-  margin: 0px;
-  padding: 0px;
+.home .home-content .block h3{
+    color:whitesmoke;
+    font-size: 60px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px;
 }
-.home .home-content .block h3 {
-  color: black;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 0px;
-  padding: 0px;
+.home .home-content .block h3{
+    color:whitesmoke;
+    font-size: 50px;
+    font-weight: 400;
+    margin:0px;
+    padding: 0px;
 }
+
 
 /* About  Section */
 
-.about-me {
-  padding: 100px 15px;
-  background-color: white;
+.about-me{
+    padding: 100px 15px;
+    background-color:white;
 }
-.about-me .section-title {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 40px;
+.about-me .section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
 }
-.about-me .section-title h1 {
-  display: inline-block;
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: black;
-  margin: 0px 0px 10px;
-  position: relative;
+.about-me .section-title h1{
+    display: inline-block;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:black;
+    margin: 0px 0px 10px;
+    position: relative;
 }
-.about-me .section-title h1:before {
-  content: '';
-  left: 0px;
-  position: absolute;
-  height: 2px;
-  right: 30%;
-  background-color: orange;
-  bottom: 0px;
+.about-me .section-title h1:before{
+    content: '';
+    left: 0px;
+    position: absolute;
+    height: 2px;
+    right: 30%;
+    background-color: orange;
+    bottom: 0px;
 }
-.text-uppercase {
-  text-transform: uppercase !important;
+.text-uppercase{
+    text-transform: uppercase!important;
 }
-.about-me .section-title p.small {
-  display: block;
-  font-size: 15px;
-  color: gray;
-  font-weight: 400;
-  letter-spacing: 2px;
+.about-me .section-title p.small{
+    display: block;
+    font-size: 15px;
+    color:gray;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
-.about-me .about-content .img {
-  flex: 0 0 33%;
-  max-width: 33%;
+.about-me .about-content .img{
+    flex: 0 0 33%;
+    max-width: 33%;
 }
-.about-me .about-content .img img {
-  width: 100%;
-  display: block;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+.about-me .about-content .img img{
+    width: 100%;
+    display: block;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
-.about-me .about-content .text {
-  flex: 0 0 66.66%;
-  max-width: 66.66%;
-  padding-left: 30px;
+.about-me .about-content .text{
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    padding-left: 30px;
 }
 
-.about-me .about-content .text h4 {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0px 0px 5px;
-  color: black;
+.about-me .about-content .text h4{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0px 0px 5px;
+    color: black;
 }
-.about-me .about-content .text h6 {
-  font-size: 15px;
-  font-weight: 500;
-  margin: 0px 0px 15px;
-  color: black;
+.about-me .about-content .text h6{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 0px 15px;
+    color: black;
 }
-.about-me .about-content .text h6 span {
-  color: black;
+.about-me .about-content .text h6 span{
+    color:black;
 }
-.about-me .about-content .text p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 23px;
-  color: gray;
-  margin: 0px 0px 20px;
+.about-me .about-content .text p{
+    font-size:15px;
+    font-weight: 400;
+    line-height: 23px;
+    color: gray;
+    margin: 0px 0px 20px;
 }
-.about-me .about-content .text .info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.about-me .about-content .text .info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
-.about-me .about-content .text .info .list {
-  flex: 0 0 calc(50% - 15px);
-  max-width: calc(50% - 15px);
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 1px dotted black;
-  padding-bottom: 10px;
+.about-me .about-content .text .info .list{
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px dotted black;
+    padding-bottom: 10px;
 }
-.about-me .about-content .text .info .list label {
-  padding-right: 10px;
-  color: black;
-  font-weight: 600;
-  font-size: 15px;
+.about-me .about-content .text .info .list label{
+    padding-right: 10px;
+    color:black;
+    font-weight: 600;
+    font-size: 15px;
 }
-.about-me .about-content .text .info .list p {
-  margin: 0px;
+.about-me .about-content .text .info .list p{
+    margin: 0px;
 }
+
 
 /* Skills Section */
 
-.skills {
-  padding: 100px 15px;
-  background-color: white;
+.skills{
+    padding: 100px 15px;
+    background-color: white;
 }
-.skills .section-title h1 {
-  display: inline-block;
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: black;
-  margin: 0px 0px 20px;
-  position: relative;
+.skills .section-title h1{
+    display: inline-block;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:black;
+    margin: 0px 0px 20px;
+    position: relative;
 }
-.skills .section-title h1::before {
-  content: '';
-  left: 0px;
-  position: absolute;
-  height: 2px;
-  right: 30%;
-  background-color: orange;
-  bottom: 0px;
+.skills .section-title h1::before{
+    content: '';
+    left: 0px;
+    position: absolute;
+    height: 2px;
+    right: 30%;
+    background-color:orange;
+    bottom: 0px;
 }
-.skills .section-title p.small {
-  display: block;
-  font-size: 15px;
-  color: gray;
-  font-weight: 400;
-  letter-spacing: 2px;
+.skills .section-title p.small{
+    display: block;
+    font-size: 15px;
+    color:gray;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
-.skills .skills-content {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding-right: 30px;
+.skills .skills-content{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 30px;
 }
-.skills .img {
-  flex: 0 0 50%;
-  max-width: 50%;
+.skills .img{
+    flex: 0 0 50%;
+    max-width: 50%;
 }
-.align-items-center {
-  align-items: center;
+.align-items-center{
+    align-items:center;
 }
-.skills .img img {
-  width: 100%;
-  display: block;
+.skills .img img{
+    width: 100%;
+    display: block;
 }
-.skills .skills-content .skill-box {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 30px;
+.skills .skills-content .skill-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
 }
-.skills .skills-content .skill-box h6 {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-  margin: 0px 0px 8px;
+.skills .skills-content .skill-box h6{
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin: 0px 0px 8px;
 }
-.skills .skills-content .skill-box .skill-bar {
-  height: 5px;
-  background-color: black;
-  position: relative;
+.skills .skills-content .skill-box .skill-bar{
+    height: 5px;
+    background-color: black;
+    position: relative;
 }
-.skills .skills-content .skill-box .skill-bar .skill-bar-in {
-  background-color: yellow;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 100%;
+.skills .skills-content .skill-box .skill-bar .skill-bar-in{
+    background-color:yellow;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
 }
-.skills .skills-content .skill-box .skill-bar .skill-bar-in span {
-  color: gray;
-  font-size: 16px;
-  font-weight: 500;
-  position: absolute;
-  right: 0px;
-  top: -30px;
+.skills .skills-content .skill-box .skill-bar .skill-bar-in span{
+    color:gray;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    right: 0px;
+    top: -30px;
 }
+
 
 /* Contact Section */
 
-.contact-me {
-  padding: 100px 15px;
-  background-color: #f5f8fd;
+.contact-me{
+    padding: 100px 15px;
+    background-color:#f5f8fd;
 }
-.contact-me .section-title h1 {
-  display: inline-block;
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: black;
-  margin: 0px 0px 30px;
-  position: relative;
+.contact-me .section-title h1{
+    display:inline-block;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:black;
+    margin: 0px 0px 30px;
+    position: relative;
 }
-.contact-me .section-title h1::before {
-  content: '';
-  left: 0px;
-  position: absolute;
-  height: 2px;
-  right: 30%;
-  background-color: orange;
-  bottom: 0px;
+.contact-me .section-title h1::before{
+    content: '';
+    left: 0px;
+    position: absolute;
+    height: 2px;
+    right: 30%;
+    background-color:orange;
+    bottom: 0px;
 }
-.contact-me .section-title h1:before {
-  left: 30%;
+.contact-me .section-title h1:before{
+    left: 30%;
 }
-.contact-me .contact-form {
-  background-color: white;
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 50px;
-  border: 1px solid white;
+.contact-me .contact-form{
+    background-color:white;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 50px;
+    border: 1px solid white;
 }
-.contact-me .contact-form .text {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding-bottom: 20px;
+.contact-me .contact-form .text{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
 }
-.contact-me .contact-form .text h2 {
-  font-size: 25px;
-  font-weight: 400;
-  color: black;
-  margin: 0px;
-  padding: 0px;
+.contact-me .contact-form .text h2{
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    margin: 0px;
+    padding:0px;
 }
-.contact-me .contact-form .row {
-  flex-wrap: wrap;
+.contact-me .contact-form .row{
+    flex-wrap: wrap;
 }
-.contact-me .contact-form .space-between {
-  justify-content: space-between;
+.contact-me .contact-form .space-between{
+    justify-content: space-between;
 }
-.contact-me .contact-form .col-6 {
-  flex: 0 0 calc(50% - 15px);
-  max-width: calc(50% - 15px);
+.contact-me .contact-form .col-6{
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
 }
-.contact-me .contact-form .col-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
+.contact-me .contact-form .col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
 }
-.contact-me .contact-form .form-control {
-  height: 45px;
-  width: 100%;
-  margin-bottom: 15px;
-  border: 1px solid gray;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-family: 400;
-  font-family: 'Roboto Slab', serif;
+.contact-me .contact-form .form-control{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-family: 400;
+    font-family: 'Roboto Slab', serif;
 }
-.contact-me .contact-form textarea.form-control {
-  height: 120px;
+.contact-me .contact-form textarea.form-control{
+    height: 120px;
 }
-.contact-me .contact-form .form-control::placeholder {
-  color: darkgrey;
+.contact-me .contact-form .form-control::placeholder{
+    color: darkgrey;
 }
-.contact-me .contact-form .button {
-  flex: 0 0 100%;
-  max-width: 100%;
+.contact-me .contact-form .button{
+    flex: 0 0 100%;
+    max-width: 100%;
 }
-.contact-me .contact-form .button a {
-  border-radius: 4px;
-  color: white;
-  border: 1px solid black;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: all 0.5s ease;
-  background-color: black;
+.contact-me .contact-form .button a{
+    border-radius: 4px;
+    color: white;
+    border: 1px solid black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all .5s ease;
+    background-color:black;
 }
-.contact-me .contact-form .button a:hover {
-  background-color: white;
-  color: black;
+.contact-me .contact-form .button a:hover{
+    background-color:white;
+    color:black;
 }
+
 
 /* Footer Section */
 
-footer {
-  padding: 40px 5px;
-  background-color: gray;
+footer{
+    padding: 40px 5px;
+    background-color:gray;
 }
-footer .logo {
-  flex: 0 0 100%;
-  max-width: 100%;
-  text-align: center;
-  font-size: 30px;
-  color: black;
-  font-weight: 600;
+footer .logo{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color:black;
+    font-weight: 600;
 }
+
 
 /* Copyright Section */
 
-.copyright {
-  background-color: gray;
-  border-top: 1px solid darkgray;
-  padding: 15px;
+.copyright{
+    background-color: gray;
+    border-top:1px solid darkgray;
+    padding: 15px;
 }
-.copyright p {
-  color: black;
-  margin: 0px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 15px;
+.copyright p{
+    color: black;
+    margin: 0px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
 }
+
 
 /* Responsive */
 
-.ham-burger .fa {
-  font-size: 20px;
-  height: 30px;
-  width: 35px;
-  background-color: white;
-  color: black;
-  border-radius: 3px;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  display: none;
-  border: 1px solid #eeeeee;
-}
 
-@media (max-width: 991px) {
-  .home .home-content .block h1 {
-    font-size: 45px;
-  }
-}
-@media (max-width: 767px) {
-  .home .home-content .block h1 {
-    font-size: 40px;
-  }
-  .home .home-content .block h3 {
-    font-size: 25px;
-  }
-  header {
-    padding: 15px;
-    position: fixed;
-    background-color: white;
-    border: none;
-  }
-  header .brand-name a {
+.ham-burger .fa{
+    font-size: 20px;
+    height: 30px;
+    width: 35px;
+    background-color:white;
     color: black;
-  }
-  .ham-burger .fa {
-    display: inline-block;
-  }
-  .navbar {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    left: 0px;
-    top: 60px;
-    padding: 15px;
-    border-top: 1px solid lightgray;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
     display: none;
-  }
-  .navbar.show {
-    display: block;
-  }
-  header .navbar ul li {
-    display: block;
-    margin-left: 0px;
-  }
-  header .navbar ul li a {
-    line-height: 42px;
-    color: black;
-  }
-  header .navbar ul li a::before {
-    background-color: black;
-  }
-  .about-me .about-content .text {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-left: 0px;
-    padding-top: 30px;
-  }
-  .about-me .about-content .img {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .skills .skills-content {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-right: 0px;
-  }
-  .skills .img {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .contact-me .contact-form {
-    padding: 40px 20px;
-  }
-  .contact-me .contact-form .col-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .about-me .about-content .text .info .list p {
-    margin: 0px;
-    flex: 0 0 100%;
-  }
+    border: 1px solid #eeeeee;
 }
 
-@media (max-width: 500px) {
-  .home .home-content .block h1 {
-    font-size: 40px;
-  }
-  .home .home-content .block h3 {
-    font-size: 25px;
-  }
+@media(max-width: 991px){
+    .home .home-content .block h1{
+        font-size: 45px;
+    }
+}
+@media(max-width: 767px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: white;
+        border: none;
+    }
+    header .brand-name a{
+        color:black;
+    }
+    .ham-burger .fa{
+        display: inline-block;
+    }
+    .navbar{
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        left: 0px;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid lightgray;
+        display: none;
+    }
+    .navbar.show {
+        display: block;
+    }
+    header .navbar ul li{
+        display: block;
+        margin-left: 0px;
+    }
+    header .navbar ul li a{
+        line-height: 42px;
+        color:black;
+    }
+    header .navbar ul li a::before{
+        background-color: black;
+    }
+    .about-me .about-content .text{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left:0px;
+        padding-top: 30px;
+    }
+    .about-me .about-content .img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .skills .skills-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right:0px;
+    }
+    .skills .img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-me .contact-form{
+        padding:40px 20px;
+    }
+    .contact-me .contact-form .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about-me .about-content .text .info .list p {
+        margin: 0px;
+        flex: 0 0 100%;
+    }
+}
 
-  .home .home-content .block {
-    padding-left: 20px;
-  }
+@media(max-width: 500px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+
+    .home .home-content .block{
+        padding-left: 20px;
+    }
 }
